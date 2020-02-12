@@ -1,0 +1,89 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+	position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    background-color: #000000;
+    background-position: center top;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-image: url(https://cdn4.sportngin.com/attachments/background_graphic/b3f9-129332244/Website_Background_Sacramento.jpg);
+}
+.games-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: start;
+	width: 80%;
+	max-width: 1000px;
+	min-width: 250px;
+	margin: auto;
+	padding: 10px;
+	background-color: #fff;
+}
+@media (max-width: 1000px) {
+  .games-container {
+		/* weird calc to adjust for padding in body */
+		width: calc(100% + 16px);
+		margin-left: -8px;
+		margin-right: -8px;
+  }
+}
+
+.ticket-card {
+	height: 300px;
+	flex-grow: 1;
+	width: 25%;
+	max-width: 25%;
+	padding: 10px;
+}
+@media (max-width: 800px) {
+  .ticket-card {
+		width: 33%;
+		max-width: 33%;
+  }
+}
+@media (max-width: 600px) {
+  .ticket-card {
+		width: 50%;
+		max-width: 50%;
+  }
+}
+@media (max-width: 460px) {
+  .ticket-card {
+		width: 100%;
+		max-width: 270px;
+		margin-left: auto;
+		margin-right: auto;
+  }
+}
+
+.ticket-card-body {
+	height: 100%;
+	width: 100%;
+	border: solid 1px black;
+	position: relative;
+	background: rgb(152,152,152);
+	background: linear-gradient(0deg, rgba(230,230,230,1) 0%, rgba(240,240,240,1) 13%, rgba(255,255,255,1) 40%);
+}
+
+.logo-holder {
+	display: block;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+
+.logo-image{
+	width: 100%;
+	height: auto;
+}
+
+.opponent {
+	
+}
