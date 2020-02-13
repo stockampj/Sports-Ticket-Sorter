@@ -9,7 +9,7 @@ var singleGameTickets = [
     {
         'team': 'FC Tulsa', 
         'date': 'Saturday, Mar. 7', 
-        'location':'Papa Murphy&apos;s', 
+        'location':'Papa Murphy&apos;s Park', 
         'time':'7:30 PM',
         'home': true
     },
@@ -156,7 +156,7 @@ var singleGameTickets = [
     {
         'team':'Tacoma Defiance', 
         'date':'Wednesday, July 29', 
-        'location':'Papa Murphy&apos;s', 
+        'location':'Papa Murphy&apos;s Park', 
         'time':'8 PM',
         'home': true 
     },
@@ -170,7 +170,7 @@ var singleGameTickets = [
     {
         'team':'Austin Bold FC', 
         'date':'Saturday, Aug. 8', 
-        'location':'Papa Murphy&apos;s', 
+        'location':'Papa Murphy&apos;s Park', 
         'time':'8 PM',
         'home': true 
     },
@@ -184,7 +184,7 @@ var singleGameTickets = [
     {
         'team':'Portland Timbers 2', 
         'date':'Saturday, Aug. 22', 
-        'location':'Papa Murphy&apos;s', 
+        'location':'Papa Murphy&apos;s Park', 
         'time':'8 PM',
         'home': true 
     },
@@ -205,7 +205,7 @@ var singleGameTickets = [
     {
         'team':'Colorado Springs Switchbacks FC', 
         'date':'Wednesday, Sept. 9', 
-        'location':'Papa Murphy&apos;s', 
+        'location':'Papa Murphy&apos;s Park', 
         'time':'7 PM',
         'home': true 
     },
@@ -219,7 +219,7 @@ var singleGameTickets = [
     {
         'team':'Las Vegas Lights FC', 
         'date':'Saturday, Sept. 19', 
-        'location':'Papa Murphy&apos;s', 
+        'location':'Papa Murphy&apos;s Park', 
         'time':'7:30 PM',
         'home': true 
     },
@@ -233,7 +233,7 @@ var singleGameTickets = [
     {
         'team':'Real Monarchs SLC', 
         'date':'Sunday, Oct. 4', 
-        'location':'Papa Murphy&apos;s', 
+        'location':'Papa Murphy&apos;s Park', 
         'time':'2 PM',
         'home': true 
     },
@@ -247,7 +247,7 @@ var singleGameTickets = [
     {
         'team':'Pheonix Rising FC', 
         'date':'Saturday, Oct. 17', 
-        'location':'Papa Murphy&apos;s', 
+        'location':'Papa Murphy&apos;s Park', 
         'time':'7 PM',
         'home': true
     }
