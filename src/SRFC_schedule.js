@@ -42,7 +42,7 @@ var singleGameTickets = [
         'home': true 
     },
     {
-        'team':'Rio Grande Vally FC Toros', 
+        'team':'Rio Grande Valley FC Toros', 
         'date':'Sunday, Apr. 4', 
         'location':'H-E-B Park', 
         'time':'5:30 PM',
@@ -105,10 +105,6 @@ var singleGameTickets = [
         'home': true 
     },
     {
-        'team':'Colorado Springs Switchbacks FC', 
-        'date':'Saturday, June 6', 
-        'location':'Weidner Field', 
-        'time':'5 PM',
         'home': false
     },
     {
@@ -203,10 +199,6 @@ var singleGameTickets = [
         'home': false
     },
     {
-        'team':'Colorado Springs Switchbacks FC', 
-        'date':'Wednesday, Sept. 9', 
-        'location':'Papa Murphy&apos;s Park', 
-        'time':'7 PM',
         'home': true 
     },
     {
@@ -252,3 +244,25 @@ var singleGameTickets = [
         'home': true
     }
 ]; // end singleGameTickets
+
+const URLpathStart = './img/SRFC_TEAMs/'
+
+const logoURLpaths = {
+    'Austin Bold FC': `${URLpathStart}Austin.jpg`,
+    'El Paso Locomotive FC': `${URLpathStart}El_Paso.jpg`,
+    'FC Tulsa': `${URLpathStart}Tulsa.jpg`,
+    'Las Vegas Lights FC': `${URLpathStart}Las_Vegas.jpg`,
+    'LA Galaxy II' : `${URLpathStart}LA_Galaxy.jpg`,
+    'New Mexico United': `${URLpathStart}New_Mexico.jpg`,
+    'Oakland Roots': `${URLpathStart}Oakland_Roots.jpg`,
+    'OKC Energy FC': `${URLpathStart}OKC.jpg`,
+    'Orange County SC': `${URLpathStart}OC.jpg`,
+    'Pheonix Rising FC': `${URLpathStart}Phoenix.jpg`,
+    'Portland Timbers 2': `${URLpathStart}Portland.jpg`,
+    'San Antonio FC': `${URLpathStart}San_Antonio.jpg`,
+    'Real Monarchs SLC': `${URLpathStart}SLC.jpg`,
+    'Reno 1868 FC': `${URLpathStart}Reno.jpg`,
+    'Rio Grande Valley FC Toros': `${URLpathStart}RGV.jpg`,
+    'San Diego Loyal': `${URLpathStart}SD.jpg`,
+    'Tacoma Defiance': `${URLpathStart}Tacoma.jpg`
+  }
