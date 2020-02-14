@@ -1,8 +1,18 @@
 singleGameTickets.forEach((game)=>{
   const {team, date, location, time, home } = game;
   const logoURLpath =  logoURLpaths[team];
-  locationFlagURL = (home) ? './img/home.svg' : './img/away.svg';
-  locationText = (home) ? 'H' : 'A';
+  const locationFlagURL = (home) ? './img/home.svg' : './img/away.svg';
+  const locationText = (home) ? 'H' : 'A';
+
+  // this is a small triangle SVG to show a home or away game status
+  const flagColor = (home) ? '#7c2529' : '#666'
+  const flagSVG= `
+    <svg height="80" width="80">
+      <polygon points="-10,-10 90,-10 -10,90" style="fill:white;fill-opacity:1;stroke:${flagColor};stroke-width:1" />
+      <polygon points="-10,-10 75,-10 -10,75" style="fill:${flagColor};fill-opacity:.25;stroke:${flagColor};stroke-width:1" />
+      <text class="location-flag-text" x="10" y="30" fill=${flagColor}>${locationText}</text>
+    </svg>`
+
   
   //this code transforms the team name if it exceeds a certain number of characters and breaks it in the middle of the word count
   const teamNameTransformer = (string)=>{
@@ -25,21 +35,20 @@ singleGameTickets.forEach((game)=>{
 
     return teamString.toUpperCase();
   }
+  `<img src=${locationFlagURL} class="location-flag">`
+
+
 
   $('#upcoming-games-schedule').append(`
-    <div class="ticket-card">
+    <div class="ticket-card-wrapper">
       <div class="ticket-card-body">
         <div class="logo-holder">
           <img class="logo-image" src=${logoURLpath} aria-label="logo for ${team}">
-        </div>
-        <div class="location-flag-wrapper">
-          <img src=${locationFlagURL} class="location-flag">
-          <div class="location-flag-text">${locationText}</div>
+          <div class="location-flag-wrapper">${flagSVG}</div>
         </div>
         <div class="header-wrapper">
           <h4 class="header-title header"><span class='date'>${date.toUpperCase()}</span><br></h4>
         </div>
-        
         <div class="content-holder">
           <div class="team-wrapper">
             <h2 class="team header">${teamNameTransformer()}</h2>
