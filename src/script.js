@@ -15,7 +15,7 @@ singleGameTickets.forEach((game)=>{
 
   
   //this code transforms the team name if it exceeds a certain number of characters and breaks it in the middle of the word count
-  const teamNameTransformer = (string)=>{
+  const teamNameTransformer = ()=>{
     let teamString = '';
     if (team.length > 20){
       let string1='';
