@@ -1,15 +1,22 @@
 singleGameTickets.forEach((game)=>{
-  const {team, date, location, time, home } = game;
-  const logoURLpath =  logoURLpaths[team];
-  const locationFlagURL = (home) ? './img/home.svg' : './img/away.svg';
-  const locationText = (home) ? 'H' : 'A';
+  const {team, date, location, time, home, ticketURL } = game;
+  const logoURLpath =  logoURLpaths[team];  
 
   // this is a small triangle SVG to show a home or away game status
+  const locationText = (home) ? 'H' : 'A';
   const flagColor = (home) ? '#7c2529' : '#666'
   const flagSVG= `
     <svg height="80" width="80">
-      <polygon points="-10,-10 90,-10 -10,90" style="fill:white;fill-opacity:1;stroke:${flagColor};stroke-width:1" />
-      <polygon points="-10,-10 75,-10 -10,75" style="fill:${flagColor};fill-opacity:.25;stroke:${flagColor};stroke-width:1" />
+      <polygon points="-10,-10 90,-10 -10,90" style="
+        fill:white;
+        fill-opacity:1;
+        stroke:${flagColor};
+        stroke-width:1" />
+      <polygon points="-10,-10 75,-10 -10,75" style="
+        fill:${flagColor};
+        fill-opacity:.25;
+        stroke:${flagColor};
+        stroke-width:1" />
       <text class="location-flag-text" x="10" y="30" fill=${flagColor}>${locationText}</text>
     </svg>`
 
@@ -32,12 +39,8 @@ singleGameTickets.forEach((game)=>{
     }else{
       teamString= team;
     }
-
     return teamString.toUpperCase();
   }
-  `<img src=${locationFlagURL} class="location-flag">`
-
-
 
   $('#upcoming-games-schedule').append(`
     <div class="ticket-card-wrapper">
@@ -47,19 +50,20 @@ singleGameTickets.forEach((game)=>{
           <div class="location-flag-wrapper">${flagSVG}</div>
         </div>
         <div class="header-wrapper">
-          <h4 class="header-title header"><span class='date'>${date.toUpperCase()}</span><br></h4>
+          <h4 class="header-title header-override"><span class='date'>${date.toUpperCase()}</span><br></h4>
         </div>
+        <div class="gradient-cover"></div>
         <div class="content-holder">
           <div class="team-wrapper">
-            <h2 class="team header">${teamNameTransformer()}</h2>
+            <h2 class="team header-override">${teamNameTransformer()}</h2>
           </div>
           <div class="info-wrapper">
-            <h4 class="location header">${location} </h4>
-            <h4 class="time header">@ ${time}</h4>
+            <h4 class="location header-override"><i class="fas fa-map-marker-alt"></i> ${location} </h4>
+            <h4 class="time header-override"><i class="far fa-clock"></i> ${time}</h4>
           </div>
           <div class="buttons-panel">
-            <button class="card-button">${('Specials').toUpperCase()}</button>
-            <button class="card-button">${('Tickets').toUpperCase()}</button>
+            <a class="card-button">${('Specials').toUpperCase()}</a>
+            <a class="card-button" href=${ticketURL}><i class="fas fa-ticket-alt"></i> ${('Tickets').toUpperCase()}</a>
           </div>
         </div>
       </div>
