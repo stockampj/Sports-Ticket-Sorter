@@ -4,6 +4,11 @@ singleGameTickets.forEach((game)=>{
 
   // this is a small triangle SVG to show a home or away game status
   const locationText = (home) ? 'H' : 'A';
+  const locationURL = () =>{
+    let url = 'http://www.google.com/search?q='
+    location.split(' ').forEach((word)=>{url += word + "+";})
+    return url;
+}
   const flagColor = (home) ? '#7c2529' : '#666'
   const flagSVG= `
     <svg height="80" width="80">
@@ -58,7 +63,7 @@ singleGameTickets.forEach((game)=>{
             <h2 class="team header-override">${teamNameTransformer()}</h2>
           </div>
           <div class="info-wrapper">
-            <h4 class="location header-override"><i class="fas fa-map-marker-alt"></i> ${location} </h4>
+          <a href=${locationURL()} target="blank" class="location header-override"><i class="fas fa-map-marker-alt"></i> ${location}</a>
             <h4 class="time header-override"><i class="far fa-clock"></i> ${time}</h4>
           </div>
           <div class="buttons-panel">
@@ -70,3 +75,4 @@ singleGameTickets.forEach((game)=>{
     </div>
   `);
 });
+

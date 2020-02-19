@@ -186,6 +186,7 @@ body {
 }
 .location{
 	color:#ba8041;
+	text-decoration: none;
 }
 
 .time {
@@ -224,3 +225,4 @@ body {
 .header-override{
 	margin: 0px;
 }
+
