@@ -37,12 +37,13 @@ body {
 
 .ticket-card-wrapper {
 	position: relative;
-	height: 300px;
+	height: 350px;
 	flex-grow: 1;
 	width: calc(100% / 3);
 	max-width: calc(100% / 3);
 	padding: 15px;
 	font-family: Lato,sans-serif;
+	overflow: hidden;
 }
 @media (max-width: 920px) {
   .ticket-card-wrapper {
@@ -72,7 +73,7 @@ body {
 	overflow: hidden;
 }
 
-.logo-holder {
+.hero-image-holder {
 	position: absolute;
 	top: 10%;
 	display: flex;
@@ -81,12 +82,18 @@ body {
 	left: 0px;
 	width: 100%;
 	height: 50%;
-	padding: 0px 5px 5px 5px;
+	padding: 0px 0px 0px 0px;
 	overflow: hidden;
 	filter: saturate(75%);
 	transition: all .5s;
 }
-.ticket-card-body:hover .logo-holder{
+
+.logo-image-holder {
+	padding: 0px 5px 5px 5px;
+	transition: all .5s;
+}
+
+.ticket-card-body:hover .logo-image-holder{
 	padding: 0px;
 	filter: saturate(100%)
 }
@@ -94,6 +101,11 @@ body {
 .logo-image{
 	height: 100%;
 	width: auto;
+}
+
+.special-image{
+	height: auto;
+	width: 100%;
 }
 .location-flag-wrapper {
 	position: absolute;
@@ -170,6 +182,7 @@ body {
 	height: 2.5em;
 	width: 100%;
 	overflow: hidden;
+	margin-top: 5px;
 }
 
 .team{
@@ -188,10 +201,23 @@ body {
 	display: flex;
 	justify-content: space-around;
 	width: 100%;
-	padding: 10px 10px 0px 10px;
+	padding: 10px 10px 10px 10px;
 	font-size: .9em;
 	/* background-color: red; */
 }
+.presale-content-wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	padding: 2px
+}
+
+.presale-description {
+	font-weight: 200;
+	font-size: .9em;
+}
+
 .location{
 	color:#ba8041;
 	text-decoration: none;

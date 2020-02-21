@@ -8,8 +8,8 @@ var singleGameTickets = [
         'time':'6 PM',
         'home': true,
         'specialsContent': {
-            'bannerPath':'',
-            'description':''
+            'bannerPath':'https://daily.jstor.org/wp-content/uploads/2018/06/soccer_europe_1050x700.jpg',
+            'description':'Test Description: Family Night at the sports arena. '
         },
         'ticketURL': 'https://www1.ticketmaster.com/preseason-friendly-sacramento-republic-fc-vs-real-monarchs-slc/event/1C005838C80A756E'
     },
@@ -215,6 +215,7 @@ var singleGameTickets = [
         'location':'Papa Murphy&apos;s Park', 
         'presaleDescription':'Mon, Aug 24 @ 1 PM',
         'broadcast':'KQCA My58, Estrella TV Sacramento, ESPN+',
+        'time':'GIVE ME A TIME',
         'home': true ,
         'specialsContent': {
             'bannerPath':'',
