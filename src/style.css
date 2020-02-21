@@ -121,6 +121,14 @@ body {
 	background: rgb(124, 37, 41);
 	border-bottom: solid 1px rgba(255,255,255,.4);
 }
+
+.header-home {
+	background-color: rgb(124, 37, 41);
+}
+
+.header-away {
+	background-color: #666;
+}
 .header-title{
 	width: 100%;
 	color:White;
@@ -226,3 +234,6 @@ body {
 	margin: 0px;
 }
 
+.hide {
+	display: none;
+}

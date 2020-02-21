@@ -2,13 +2,20 @@ singleGameTickets.forEach((game)=>{
   const {team, date, location, time, home, ticketURL } = game;
   const logoURLpath =  logoURLpaths[team];  
 
-  // this is a small triangle SVG to show a home or away game status
-  const locationText = (home) ? 'H' : 'A';
+  // this generates a search for the fields location via google
   const locationURL = () =>{
     let url = 'http://www.google.com/search?q='
     location.split(' ').forEach((word)=>{url += word + "+";})
     return url;
-}
+  }
+
+  //this changes the color of the header by injecting a home/away background color
+  const headerColorClass = (home) ? 'header-home' : 'header-away';
+  //This hides the tickets button depending on the home/away status. It could be placed in other classes to show or hide depending on this status.
+  const showClass = (home) ? 'show' : 'hide';
+  
+  // this is a small triangle SVG to show a home or away game status
+  const locationText = (home) ? 'H' : 'A';
   const flagColor = (home) ? '#7c2529' : '#666'
   const flagSVG= `
     <svg height="80" width="80">
@@ -54,8 +61,8 @@ singleGameTickets.forEach((game)=>{
           <img class="logo-image" src=${logoURLpath} aria-label="logo for ${team}">
           <div class="location-flag-wrapper">${flagSVG}</div>
         </div>
-        <div class="header-wrapper">
-          <h4 class="header-title header-override"><span class='date'>${date.toUpperCase()}</span><br></h4>
+        <div class="header-wrapper ${headerColorClass}">
+          <h4 class="header-title header-override"><span class='date'>${date.toUpperCase()}</span></h4>
         </div>
         <div class="gradient-cover"></div>
         <div class="content-holder">
@@ -68,11 +75,10 @@ singleGameTickets.forEach((game)=>{
           </div>
           <div class="buttons-panel">
             <a class="card-button">${('Specials').toUpperCase()}</a>
-            <a class="card-button" href=${ticketURL}><i class="fas fa-ticket-alt"></i> ${('Tickets').toUpperCase()}</a>
+            <a class="card-button ${showClass}" href=${ticketURL}><i class="fas fa-ticket-alt"></i> ${('Tickets').toUpperCase()}</a>
           </div>
         </div>
       </div>
     </div>
   `);
 });
-
