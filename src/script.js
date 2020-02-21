@@ -1,5 +1,5 @@
 singleGameTickets.forEach((game)=>{
-  const {team,datelocation, time, broadcast,home,specialsContent,specialsURL,ticketContent,ticketURL} = game;
+  const {team,datelocation,time,presaleDescription,broadcast,home,specialsContent,specialsURL,ticketContent,ticketURL} = game;
 
   const logoURLpath =  logoURLpaths[team];  
 
