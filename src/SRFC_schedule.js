@@ -6,8 +6,10 @@ var singleGameTickets = [
         'broadcast':'',
         'time':'6 PM',
         'home': true,
-        'specialsContent':'',
-        'specialsURL':'',
+        'specialsContent': {
+            'bannerPath':'',
+            'description':''
+        }
         'ticketContent':'Tickets',
         'ticketURL': 'https://www1.ticketmaster.com/preseason-friendly-sacramento-republic-fc-vs-real-monarchs-slc/event/1C005838C80A756E'
     },
@@ -18,6 +20,10 @@ var singleGameTickets = [
         'broadcast':'KQCA My58, Estrella TV Sacramento, ESPN+',
         'time':'7:30 PM',
         'home': true,
+        'specialsContent': {
+            'bannerPath':'',
+            'description':''
+        }
         'ticketContent':'Tickets',
         'ticketURL': 'https://www1.ticketmaster.com/sacramento-republic-fc-vs-fc-tulsa/event/1C00583DBAEF7791'
     },
@@ -28,6 +34,10 @@ var singleGameTickets = [
         'broadcast':'ESPN+',
         'time':'7:30 PM',
         'home': true ,
+        'specialsContent': {
+            'bannerPath':'',
+            'description':''
+        }
         'ticketContent':'Tickets',
         'ticketURL': 'https://www.ticketmaster.com/sacramento-republic-fc-vs-reno-1868-fc/event/1C00583DBAF47793'
     },
@@ -38,6 +48,10 @@ var singleGameTickets = [
         'broadcast':'KQCA My58, Estrella TV Sacramento, ESPN+',
         'time':'2 PM',
         'home': true ,
+        'specialsContent': {
+            'bannerPath':'',
+            'description':''
+        }
         'ticketContent':'Tickets',
         'ticketURL': 'https://www1.ticketmaster.com/sacramento-republic-fc-vs-okc-energy-fc/event/1C00583DBAF7779D'
     },
@@ -48,6 +62,10 @@ var singleGameTickets = [
         'broadcast':'',
         'time':'7:30 PM',
         'home': true ,
+        'specialsContent': {
+            'bannerPath':'',
+            'description':''
+        }
         'ticketContent':'Tickets',
         'ticketURL': 'https://www.ticketmaster.com/sacramento-republic-fc-vs-okc-energy-fc/event/1C00583DBAF7779D'
     },
@@ -58,6 +76,10 @@ var singleGameTickets = [
         'broadcast':'KQCA My58, Estrella TV Sacramento, ESPN+',
         'time':'7:30 PM',
         'home': true ,
+        'specialsContent': {
+            'bannerPath':'',
+            'description':''
+        }
         'ticketContent':'Presale: Mon, Mar. 30 at 1 PM',
         'ticketURL': ''
     },
@@ -68,6 +90,10 @@ var singleGameTickets = [
         'broadcast':'KQCA My58, Estrella TV Sacramento, ESPN+',
         'time':'7:30 PM',
         'home': true ,
+        'specialsContent': {
+            'bannerPath':'',
+            'description':''
+        }
         'ticketContent':'Presale: Mon, Mar. 30 at 1 PM',
         'ticketURL': ''
     },
@@ -78,6 +104,10 @@ var singleGameTickets = [
         'broadcast':'KQCA My58, Estrella TV Sacramento, ESPN+',
         'time':'7:30 PM',
         'home': true ,
+        'specialsContent': {
+            'bannerPath':'',
+            'description':''
+        }
         'ticketContent':'Presale: Mon, Mar. 30 at 1 PM',
         'ticketURL': ''
     },
@@ -88,6 +118,10 @@ var singleGameTickets = [
         'broadcast':'KQCA My58, Estrella TV Sacramento, ESPN+',
         'time':'8 PM',
         'home': true ,
+        'specialsContent': {
+            'bannerPath':'',
+            'description':''
+        }
         'ticketContent':'Presale: Mon, Mar. 30 at 1 PM',
         'ticketURL': ''
     },
@@ -98,6 +132,10 @@ var singleGameTickets = [
         'broadcast':'KQCA My58, Estrella TV Sacramento, ESPN+',
         'time':'8 PM',
         'home': true ,
+        'specialsContent': {
+            'bannerPath':'',
+            'description':''
+        }
         'ticketContent':'Presale: Mon, Mar. 30 at 1 PM',
         'ticketURL': ''
     },
@@ -108,6 +146,10 @@ var singleGameTickets = [
         'broadcast':'KQCA My58, Estrella TV Sacramento, ESPN+',
         'time':'8 PM',
         'home': true ,
+        'specialsContent': {
+            'bannerPath':'',
+            'description':''
+        }
         'ticketContent':'Presale: Mon, Jun. 22 at 1 PM',
         'ticketURL': ''
     },
@@ -118,6 +160,10 @@ var singleGameTickets = [
         'broadcast':'KQCA My58, Estrella TV Sacramento, ESPN+',
         'time':'8 PM',
         'home': true ,
+        'specialsContent': {
+            'bannerPath':'',
+            'description':''
+        }
         'ticketContent':'Presale: Mon, Jun. 22 at 1 PM',
         'ticketURL': ''
     },
@@ -128,6 +174,10 @@ var singleGameTickets = [
         'broadcast':'ESPN+',
         'time':'8 PM',
         'home': true ,
+        'specialsContent': {
+            'bannerPath':'',
+            'description':''
+        }
         'ticketContent':'Presale: Mon, Jun. 22 at 1 PM',
         'ticketURL': ''
     },
@@ -138,6 +188,10 @@ var singleGameTickets = [
         'broadcast':'KQCA My58, Estrella TV Sacramento, ESPN+',
         'time':'8 PM',
         'home': true ,
+        'specialsContent': {
+            'bannerPath':'',
+            'description':''
+        }
         'ticketContent':'',
         'ticketURL': ''
     },
@@ -148,6 +202,10 @@ var singleGameTickets = [
         'broadcast':'KQCA My58, Estrella TV Sacramento, ESPN+',
         'time':'8 PM',
         'home': true ,
+        'specialsContent': {
+            'bannerPath':'',
+            'description':''
+        }
         'ticketContent':'',
         'ticketURL': ''
     },
@@ -157,6 +215,10 @@ var singleGameTickets = [
         'location':'Papa Murphy&apos;s Park', 
         'broadcast':'KQCA My58, Estrella TV Sacramento, ESPN+',
         'home': true ,
+        'specialsContent': {
+            'bannerPath':'',
+            'description':''
+        }
         'ticketContent':'',
         'ticketURL': ''
     },
@@ -167,6 +229,10 @@ var singleGameTickets = [
         'broadcast':'KQCA My58, Estrella TV Sacramento, ESPN+',
         'time':'7:30 PM',
         'home': true ,
+        'specialsContent': {
+            'bannerPath':'',
+            'description':''
+        }
         'ticketContent':'',
         'ticketURL': ''
     },
@@ -177,6 +243,10 @@ var singleGameTickets = [
         'broadcast':'KQCA My58, Estrella TV Sacramento, ESPN+',
         'time':'2 PM',
         'home': true ,
+        'specialsContent': {
+            'bannerPath':'',
+            'description':''
+        }
         'ticketContent':'',
         'ticketURL': ''
     },
@@ -187,6 +257,10 @@ var singleGameTickets = [
         'broadcast':'KQCA My58, Estrella TV Sacramento, ESPN+',
         'time':'7 PM',
         'home': true,
+        'specialsContent': {
+            'bannerPath':'',
+            'description':''
+        }
         'ticketContent':'',
         'ticketURL': ''
     }
