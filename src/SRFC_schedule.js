@@ -9,7 +9,7 @@ var singleGameTickets = [
         'specialsContent': {
             'bannerPath':'',
             'description':''
-        }
+        },
         'ticketContent':'Tickets',
         'ticketURL': 'https://www1.ticketmaster.com/preseason-friendly-sacramento-republic-fc-vs-real-monarchs-slc/event/1C005838C80A756E'
     },
@@ -23,7 +23,7 @@ var singleGameTickets = [
         'specialsContent': {
             'bannerPath':'',
             'description':''
-        }
+        },
         'ticketContent':'Tickets',
         'ticketURL': 'https://www1.ticketmaster.com/sacramento-republic-fc-vs-fc-tulsa/event/1C00583DBAEF7791'
     },
@@ -37,7 +37,7 @@ var singleGameTickets = [
         'specialsContent': {
             'bannerPath':'',
             'description':''
-        }
+        },
         'ticketContent':'Tickets',
         'ticketURL': 'https://www.ticketmaster.com/sacramento-republic-fc-vs-reno-1868-fc/event/1C00583DBAF47793'
     },
@@ -51,7 +51,7 @@ var singleGameTickets = [
         'specialsContent': {
             'bannerPath':'',
             'description':''
-        }
+        },
         'ticketContent':'Tickets',
         'ticketURL': 'https://www1.ticketmaster.com/sacramento-republic-fc-vs-okc-energy-fc/event/1C00583DBAF7779D'
     },
@@ -65,7 +65,7 @@ var singleGameTickets = [
         'specialsContent': {
             'bannerPath':'',
             'description':''
-        }
+        },
         'ticketContent':'Tickets',
         'ticketURL': 'https://www.ticketmaster.com/sacramento-republic-fc-vs-okc-energy-fc/event/1C00583DBAF7779D'
     },
@@ -79,7 +79,7 @@ var singleGameTickets = [
         'specialsContent': {
             'bannerPath':'',
             'description':''
-        }
+        },
         'ticketContent':'Presale: Mon, Mar. 30 at 1 PM',
         'ticketURL': ''
     },
@@ -93,7 +93,7 @@ var singleGameTickets = [
         'specialsContent': {
             'bannerPath':'',
             'description':''
-        }
+        },
         'ticketContent':'Presale: Mon, Mar. 30 at 1 PM',
         'ticketURL': ''
     },
@@ -107,7 +107,7 @@ var singleGameTickets = [
         'specialsContent': {
             'bannerPath':'',
             'description':''
-        }
+        },
         'ticketContent':'Presale: Mon, Mar. 30 at 1 PM',
         'ticketURL': ''
     },
@@ -121,7 +121,7 @@ var singleGameTickets = [
         'specialsContent': {
             'bannerPath':'',
             'description':''
-        }
+        },
         'ticketContent':'Presale: Mon, Mar. 30 at 1 PM',
         'ticketURL': ''
     },
@@ -135,7 +135,7 @@ var singleGameTickets = [
         'specialsContent': {
             'bannerPath':'',
             'description':''
-        }
+        },
         'ticketContent':'Presale: Mon, Mar. 30 at 1 PM',
         'ticketURL': ''
     },
@@ -149,7 +149,7 @@ var singleGameTickets = [
         'specialsContent': {
             'bannerPath':'',
             'description':''
-        }
+        },
         'ticketContent':'Presale: Mon, Jun. 22 at 1 PM',
         'ticketURL': ''
     },
@@ -163,7 +163,7 @@ var singleGameTickets = [
         'specialsContent': {
             'bannerPath':'',
             'description':''
-        }
+        },
         'ticketContent':'Presale: Mon, Jun. 22 at 1 PM',
         'ticketURL': ''
     },
@@ -177,7 +177,7 @@ var singleGameTickets = [
         'specialsContent': {
             'bannerPath':'',
             'description':''
-        }
+        },
         'ticketContent':'Presale: Mon, Jun. 22 at 1 PM',
         'ticketURL': ''
     },
@@ -191,7 +191,7 @@ var singleGameTickets = [
         'specialsContent': {
             'bannerPath':'',
             'description':''
-        }
+        },
         'ticketContent':'',
         'ticketURL': ''
     },
@@ -205,7 +205,7 @@ var singleGameTickets = [
         'specialsContent': {
             'bannerPath':'',
             'description':''
-        }
+        },
         'ticketContent':'',
         'ticketURL': ''
     },
@@ -218,7 +218,7 @@ var singleGameTickets = [
         'specialsContent': {
             'bannerPath':'',
             'description':''
-        }
+        },
         'ticketContent':'',
         'ticketURL': ''
     },
@@ -232,7 +232,7 @@ var singleGameTickets = [
         'specialsContent': {
             'bannerPath':'',
             'description':''
-        }
+        },
         'ticketContent':'',
         'ticketURL': ''
     },
@@ -246,7 +246,7 @@ var singleGameTickets = [
         'specialsContent': {
             'bannerPath':'',
             'description':''
-        }
+        },
         'ticketContent':'',
         'ticketURL': ''
     },
@@ -260,7 +260,7 @@ var singleGameTickets = [
         'specialsContent': {
             'bannerPath':'',
             'description':''
-        }
+        },
         'ticketContent':'',
         'ticketURL': ''
     }
