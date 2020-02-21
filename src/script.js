@@ -1,5 +1,6 @@
 singleGameTickets.forEach((game)=>{
-  const {team, date, location, time, home, ticketURL } = game;
+  const {team,datelocation, time, broadcast,home,specialsContent,specialsURL,ticketContent,ticketURL} = game;
+
   const logoURLpath =  logoURLpaths[team];  
 
   // this generates a search for the fields location via google
@@ -13,6 +14,9 @@ singleGameTickets.forEach((game)=>{
   const headerColorClass = (home) ? 'header-home' : 'header-away';
   //This hides the tickets button depending on the home/away status. It could be placed in other classes to show or hide depending on this status.
   const showClass = (home) ? 'show' : 'hide';
+
+  // If game has special offer, show - if not, hide
+  
   
   // this is a small triangle SVG to show a home or away game status
   const locationText = (home) ? 'H' : 'A';
