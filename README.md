@@ -18,7 +18,7 @@ After cloning the repo, run `npm i` to initiate all assets/elements needed and t
 Below is an overview of each folder/file's purpose and recommended management style of new implementations:
 
 .
-├── backup                   # Backup Compiled files (alternative `dist` & `src`)
+├── backup                   # Backup Build and Compiled folders
 ├── build                    # Tools and Utilities (`gulpfile.js` & `util.js`)
 ├── dist                     # Compiled files (production ready)
 ├── src                      # Source files 
