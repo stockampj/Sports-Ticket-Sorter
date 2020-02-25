@@ -1,14 +1,23 @@
 singleGameTickets.forEach((game)=>{
-  const {team,date,location,time,presaleDescription,broadcast,home,specialsContent,ticketURL} = game;
+  // const {team,datelocation, time, broadcast,home,specialsContent,ticketContent,ticketURL} = game;
+  const {team, date, location, presaleDescription, broadcast, time, home, specialsContent, ticketURL} = game;
+  const {bannerPath, description} = specialsContent;
+  const logoURLpath =  logoURLpaths[team];
+  const ticketsAvailable = (ticketURL !== '') ? true : false;
+  const specialsAvailable = (description !== '') ? true : false;
 
-  const logoURLpath =  logoURLpaths[team];  
-
-  // this generates a search for the fields location via google
+  // this generates a search for the field's location via google
   const locationURL = () =>{
     let url = 'http://www.google.com/search?q='
     location.split(' ').forEach((word)=>{url += word + "+";})
     return url;
   }
+
+  const ticketButtonShowClass= (ticketsAvailable) ? 'show' : 'hide';
+  const presaleContentShowClass= (ticketsAvailable) ? 'hide' : 'show';
+  const specialsShowClass = (specialsAvailable) ? 'show' : 'hide';
+
+  console.log(bannerPath + " " + description)
 
   //this changes the color of the header by injecting a home/away background color
   const headerColorClass = (home) ? 'header-home' : 'header-away';
@@ -58,31 +67,60 @@ singleGameTickets.forEach((game)=>{
     return teamString.toUpperCase();
   }
 
+
   $('#upcoming-games-schedule').append(`
     <div class="ticket-card-wrapper">
-      <div class="ticket-card-body">
-        <div class="logo-holder">
-          <img class="logo-image" src=${logoURLpath} aria-label="logo for ${team}">
-          <div class="location-flag-wrapper">${flagSVG}</div>
-        </div>
-        <div class="header-wrapper ${headerColorClass}">
-          <h4 class="header-title header-override"><span class='date'>${date.toUpperCase()}</span></h4>
-        </div>
-        <div class="gradient-cover"></div>
-        <div class="content-holder">
-          <div class="team-wrapper">
-            <h2 class="team header-override">${teamNameTransformer()}</h2>
+      <div class="ticket-card-body ticket-card-front">
+          <div class="hero-image-holder logo-image-holder">
+            <img class="logo-image" src=${logoURLpath} aria-label="logo for ${team}">
+            <div class="location-flag-wrapper">${flagSVG}</div>
           </div>
-          <div class="info-wrapper">
-          <a href=${locationURL()} target="blank" class="location header-override"><i class="fas fa-map-marker-alt"></i> ${location}</a>
-            <h4 class="time header-override"><i class="far fa-clock"></i> ${time}</h4>
+          <div class="header-wrapper ${headerColorClass}">
+            <h4 class="header-title header-override"><span class='date'>${date.toUpperCase()}</span></h4>
           </div>
-          <div class="buttons-panel">
-            <a class="card-button">${('Specials').toUpperCase()}</a>
-            <a class="card-button ${showClass}" href=${ticketURL}><i class="fas fa-ticket-alt"></i> ${('Tickets').toUpperCase()}</a>
+          <div class="gradient-cover"></div>
+          <div class="content-holder">
+            <div class="team-wrapper">
+              <h2 class="team header-override">${teamNameTransformer()}</h2>
+            </div>
+            <div class="info-wrapper">
+              <a href=${locationURL()} target="blank" class="location header-override"><i class="fas fa-map-marker-alt"></i> ${location}</a>
+              <h4 class="time header-override"><i class="far fa-clock"></i> ${time}</h4>
+            </div>
+            <div class="presale-content-wrapper ${presaleContentShowClass}">            
+              <h4 class="presale-description header-override">Presale: ${presaleDescription}</h4>
+            </div>
+            <div class="buttons-panel">
+              <a onClick="toggleSides(this)" class="card-button ${specialsShowClass}">${('Specials').toUpperCase()}</a>
+              <a class="card-button ${ticketButtonShowClass}" href=${ticketURL}><i class="fas fa-ticket-alt"></i> ${('Tickets').toUpperCase()}</a>
+            </div>
           </div>
-        </div>
+      </div>
+      <div class="ticket-card-body ticket-card-back hide">
+          <div class="hero-image-holder">
+            <img class="special-image" src=${bannerPath} aria-label="special banner for this game">
+          </div>
+          <div class="header-wrapper ${headerColorClass}">
+            <h4 class="header-title header-override"><span class='date'>${date.toUpperCase()}</span></h4>
+          </div>
+          <div class="gradient-cover"></div>
+          <div class="content-holder">
+            <div class="team-wrapper">
+              <h2 class="team header-override">${teamNameTransformer()}</h2>
+            </div>
+            <div class="info-wrapper">
+              <h4 class="header-override">${description}</h4>
+            </div>
+            <div class="buttons-panel">
+              <a onClick="toggleSides(this)" class="card-button ${specialsShowClass}"><i class="fas fa-long-arrow-alt-left"></i> ${('Back').toUpperCase()}</a>
+              <a class="card-button ${ticketButtonShowClass}" href=${ticketURL}><i class="fas fa-ticket-alt"></i> ${('Tickets').toUpperCase()}</a>
+            </div>
+          </div>
       </div>
     </div>
   `);
 });
+
+function toggleSides(button) {
+  $(button).parent().parent().parent().parent().children().toggleClass('hide');
+}

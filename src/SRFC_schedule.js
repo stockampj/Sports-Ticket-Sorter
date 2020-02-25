@@ -9,7 +9,7 @@ var singleGameTickets = [
         'home': true,
         'specialsContent': {
             'bannerPath':'',
-            'description':''
+            'description':'Opening Night'
         },
         'ticketURL': 'https://www1.ticketmaster.com/preseason-friendly-sacramento-republic-fc-vs-real-monarchs-slc/event/1C005838C80A756E'
     },
@@ -65,7 +65,7 @@ var singleGameTickets = [
         'home': true ,
         'specialsContent': {
             'bannerPath':'',
-            'description':''
+            'description':'U.S. Open Cup Round 2'
         },
         'ticketURL': 'https://www.ticketmaster.com/sacramento-republic-fc-vs-okc-energy-fc/event/1C00583DBAF7779D'
     },
@@ -79,7 +79,7 @@ var singleGameTickets = [
         'home': true ,
         'specialsContent': {
             'bannerPath':'',
-            'description':''
+            'description':'First Responders Night'
         },
         'ticketURL': ''
     },
@@ -93,7 +93,7 @@ var singleGameTickets = [
         'home': true ,
         'specialsContent': {
             'bannerPath':'',
-            'description':''
+            'description':'Education Night'
         },
         'ticketURL': ''
     },
@@ -107,7 +107,7 @@ var singleGameTickets = [
         'home': true ,
         'specialsContent': {
             'bannerPath':'',
-            'description':''
+            'description':'PRIDE'
         },
         'ticketURL': ''
     },
@@ -149,7 +149,7 @@ var singleGameTickets = [
         'home': true ,
         'specialsContent': {
             'bannerPath':'',
-            'description':''
+            'description':'Salute to Service'
         },
         'ticketURL': ''
     },
@@ -163,7 +163,7 @@ var singleGameTickets = [
         'home': true ,
         'specialsContent': {
             'bannerPath':'',
-            'description':''
+            'description':'State Fair'
         },
         'ticketURL': ''
     },
@@ -177,7 +177,7 @@ var singleGameTickets = [
         'home': true ,
         'specialsContent': {
             'bannerPath':'',
-            'description':''
+            'description':'State Fair'
         },
         'ticketURL': ''
     },
@@ -191,7 +191,7 @@ var singleGameTickets = [
         'home': true ,
         'specialsContent': {
             'bannerPath':'',
-            'description':''
+            'description':'Night of Champions'
         },
         'ticketURL': ''
     },
@@ -246,7 +246,7 @@ var singleGameTickets = [
         'home': true ,
         'specialsContent': {
             'bannerPath':'',
-            'description':''
+            'description':'Noche Latina'
         },
         'ticketURL': ''
     },

@@ -23,7 +23,7 @@ body {
 	max-width: 1200px;
 	min-width: 280px;
 	margin: auto;
-	padding: 10px;
+	padding: 0px;
 	background-color: #fff;
 }
 @media (max-width: 1000px) {
@@ -234,6 +234,11 @@ body {
 	margin: 0px;
 }
 
+.show {
+	transition: ease-in-out 1s;
+}
+
 .hide {
 	display: none;
+	transition: ease-in-out 1s;
 }
