@@ -74,6 +74,7 @@ singleGameTickets.forEach((game)=>{
   // }
 
 
+
   $('#upcoming-games-schedule').append(`
     <div class="col-xs-12 splitter${monthShort}">
       <h3>${month}</h3>
@@ -128,6 +129,7 @@ singleGameTickets.forEach((game)=>{
             </div>
           </div>
       </div>
+
     </div>
   `);
 });
