@@ -4,6 +4,21 @@ const del = require('del');
 const { config, tasks } = require('../package.json');
 const { makeTask } = require('./util.js');
 
+const gulp = require('gulp');
+const sass = require('gulp-sass');
+
+sass.compiler = require('node-sass');
+
+gulp.task('sass', function () {
+  return gulp.src('./src/sass/**/*.scss')
+    .pipe(sass.sync({outputStyle: 'compressed'}).on('error', sass.logError))
+    .pipe(gulp.dest('./dist/css'));
+ });
+ 
+gulp.task('sass:watch', function () {
+  gulp.watch('./src/scss/**/*.scss', ['sass']);
+});
+
 /* Make sure each task has its key inserted. */
 Object.keys(tasks).forEach(key => {
   tasks[key].key = key;

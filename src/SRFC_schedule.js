@@ -2,11 +2,13 @@ var singleGameTickets = [
     {
         'team': 'Real Monarchs SLC', 
         'date':'Saturday, Feb. 29', 
+        'month':'February',
+        'monthShort':'Feb',
         'location':'Papa Murphy&apos;s Park',
         'presaleDescription':'',
         'broadcast':'',
         'time':'6 PM',
-        'home': true,
+        'active': true,
         'specialsContent': {
             'bannerPath':'',
             'description':'Opening Night'
@@ -16,11 +18,13 @@ var singleGameTickets = [
     {
         'team': 'FC Tulsa', 
         'date': 'Saturday, Mar. 7', 
+        'month':'March',
+        'monthShort':'Mar',
         'location':'Papa Murphy&apos;s Park',
         'presaleDescription':'',
         'broadcast':'KQCA My58, Estrella TV Sacramento, ESPN+',
         'time':'7:30 PM',
-        'home': true,
+        'active': true,
         'specialsContent': {
             'bannerPath':'',
             'description':''
@@ -29,12 +33,14 @@ var singleGameTickets = [
     },
     {
         'team':'Reno 1868 FC', 
-        'date':'Wednesday, Mar. 25', 
+        'date':'Wednesday, Mar. 25',
+        'month':'March',
+        'monthShort':'Mar',
         'location':'Papa Murphy&apos;s Park',
         'presaleDescription':'',
         'broadcast':'ESPN+',
         'time':'7:30 PM',
-        'home': true ,
+        'active': true ,
         'specialsContent': {
             'bannerPath':'',
             'description':''
@@ -43,12 +49,14 @@ var singleGameTickets = [
     },
     {
         'team':'OKC Energy FC', 
-        'date':'Sunday, Mar. 29', 
+        'date':'Sunday, Mar. 29',
+        'month':'March',
+        'monthShort':'Mar',
         'location':'Papa Murphy&apos;s Park', 
         'presaleDescription':'',
         'broadcast':'KQCA My58, Estrella TV Sacramento, ESPN+',
         'time':'2 PM',
-        'home': true ,
+        'active': true ,
         'specialsContent': {
             'bannerPath':'',
             'description':''
@@ -57,12 +65,14 @@ var singleGameTickets = [
     },
     {
         'team':'Oakland Roots', 
-        'date':'Wednesday, Apr. 8', 
-        'location':'Papa Murphy&apos;s Park', 
+        'date':'Wednesday, Apr. 8',
+        'month':'April',
+        'monthShort':'Apr',
+        'location':'Papa Murphy&apos;s Park',
         'presaleDescription':'',
         'broadcast':'',
         'time':'7:30 PM',
-        'home': true ,
+        'active': false ,
         'specialsContent': {
             'bannerPath':'',
             'description':'U.S. Open Cup Round 2'
@@ -71,12 +81,14 @@ var singleGameTickets = [
     },
     {
         'team':'New Mexico United', 
-        'date':'Saturday, Apr. 18', 
+        'date':'Saturday, Apr. 18',
+        'month':'April',
+        'monthShort':'Apr',
         'location':'Papa Murphy&apos;s Park', 
         'presaleDescription':'Mon, Mar. 30 @ 1 PM',
         'broadcast':'KQCA My58, Estrella TV Sacramento, ESPN+',
         'time':'7:30 PM',
-        'home': true ,
+        'active': false ,
         'specialsContent': {
             'bannerPath':'',
             'description':'First Responders Night'
@@ -85,12 +97,14 @@ var singleGameTickets = [
     },
     {
         'team':'San Diego Loyal', 
-        'date':'Saturday, May 2', 
+        'date':'Saturday, May 2',
+        'month':'May',
+        'monthShort':'May',
         'location':'Papa Murphy&apos;s Park', 
         'presaleDescription':'Mon, Mar. 30 at 1 PM',
         'broadcast':'KQCA My58, Estrella TV Sacramento, ESPN+',
         'time':'7:30 PM',
-        'home': true ,
+        'active': false ,
         'specialsContent': {
             'bannerPath':'',
             'description':'Education Night'
@@ -99,12 +113,14 @@ var singleGameTickets = [
     },
     {
         'team':'El Paso Locomotive FC', 
-        'date':'Saturday, May 30', 
+        'date':'Saturday, May 30',
+        'month':'May',
+        'monthShort':'May',
         'location':'Papa Murphy&apos;s Park', 
         'presaleDescription':'Mon, Mar. 30 at 1 PM',
         'broadcast':'KQCA My58, Estrella TV Sacramento, ESPN+',
         'time':'7:30 PM',
-        'home': true ,
+        'active': false ,
         'specialsContent': {
             'bannerPath':'',
             'description':'PRIDE'
@@ -113,12 +129,14 @@ var singleGameTickets = [
     },
     {
         'team':'San Antonio FC', 
-        'date':'Saturday, June 20', 
+        'date':'Saturday, June 20',
+        'month':'June',
+        'monthShort':'Jun',
         'location':'Papa Murphy&apos;s Park', 
         'presaleDescription':'Mon, Mar. 30 at 1 PM',
         'broadcast':'KQCA My58, Estrella TV Sacramento, ESPN+',
         'time':'8 PM',
-        'home': true ,
+        'active': false ,
         'specialsContent': {
             'bannerPath':'',
             'description':''
@@ -127,12 +145,14 @@ var singleGameTickets = [
     },
     {
         'team':'Orange County SC', 
-        'date':'Saturday, June 27', 
+        'date':'Saturday, June 27',
+        'month':'June',
+        'monthShort':'Jun',
         'location':'Papa Murphy&apos;s Park', 
         'presaleDescription':'Mon, Mar. 30 at 1 PM',
         'broadcast':'KQCA My58, Estrella TV Sacramento, ESPN+',
         'time':'8 PM',
-        'home': true ,
+        'active': false ,
         'specialsContent': {
             'bannerPath':'',
             'description':''
@@ -141,12 +161,14 @@ var singleGameTickets = [
     },
     {
         'team':'Rio Grande Valley FC Toros', 
-        'date':'Saturday, July 11', 
+        'date':'Saturday, July 11',
+        'month':'July',
+        'monthShort':'Jul',
         'location':'Papa Murphy&apos;s', 
         'presaleDescription':'Mon, Jun. 22 at 1 PM',
         'broadcast':'KQCA My58, Estrella TV Sacramento, ESPN+',
         'time':'8 PM',
-        'home': true ,
+        'active': false ,
         'specialsContent': {
             'bannerPath':'',
             'description':'Salute to Service'
@@ -155,12 +177,14 @@ var singleGameTickets = [
     },
     {
         'team':'LA Galaxy II', 
-        'date':'Saturday, July 18', 
+        'date':'Saturday, July 18',
+        'month':'July',
+        'monthShort':'Jul', 
         'location':'Papa Murphy&apos;s', 
         'presaleDescription':'Mon, Jun. 22 at 1 PM',
         'broadcast':'KQCA My58, Estrella TV Sacramento, ESPN+',
         'time':'8 PM',
-        'home': true ,
+        'active': false ,
         'specialsContent': {
             'bannerPath':'',
             'description':'State Fair'
@@ -169,12 +193,14 @@ var singleGameTickets = [
     },
     {
         'team':'Tacoma Defiance', 
-        'date':'Wednesday, July 29', 
+        'date':'Wednesday, July 29',
+        'month':'July',
+        'monthShort':'Jul',
         'location':'Papa Murphy&apos;s Park', 
         'presaleDescription':'Mon, Jun. 22 at 1 PM',
         'broadcast':'ESPN+',
         'time':'8 PM',
-        'home': true ,
+        'active': false ,
         'specialsContent': {
             'bannerPath':'',
             'description':'State Fair'
@@ -183,12 +209,14 @@ var singleGameTickets = [
     },
     {
         'team':'Austin Bold FC', 
-        'date':'Saturday, Aug. 8', 
+        'date':'Saturday, Aug. 8',
+        'month':'August',
+        'monthShort':'Aug',
         'location':'Papa Murphy&apos;s Park', 
         'presaleDescription':'Mon, Jun 22 @ 1 PM',
         'broadcast':'KQCA My58, Estrella TV Sacramento, ESPN+',
         'time':'8 PM',
-        'home': true ,
+        'active': false ,
         'specialsContent': {
             'bannerPath':'',
             'description':'Night of Champions'
@@ -197,12 +225,14 @@ var singleGameTickets = [
     },
     {
         'team':'Portland Timbers 2', 
-        'date':'Saturday, Aug. 22', 
+        'date':'Saturday, Aug. 22',
+        'month':'August',
+        'monthShort':'Aug',
         'location':'Papa Murphy&apos;s Park', 
         'presaleDescription':'Mon, Jun 22 @ 1 PM',
         'broadcast':'KQCA My58, Estrella TV Sacramento, ESPN+',
         'time':'8 PM',
-        'home': true ,
+        'active': false ,
         'specialsContent': {
             'bannerPath':'',
             'description':''
@@ -211,11 +241,13 @@ var singleGameTickets = [
     },
     {   
         'team':'Colorado Springs Switchbacks FC', 
-        'date':'Saturday, Sept. 9', 
+        'date':'Saturday, Sept. 9',
+        'month':'September',
+        'monthShort':'Sept',
         'location':'Papa Murphy&apos;s Park', 
         'presaleDescription':'Mon, Aug 24 @ 1 PM',
         'broadcast':'KQCA My58, Estrella TV Sacramento, ESPN+',
-        'home': true ,
+        'active': false ,
         'specialsContent': {
             'bannerPath':'',
             'description':''
@@ -224,12 +256,14 @@ var singleGameTickets = [
     },
     {
         'team':'Las Vegas Lights FC', 
-        'date':'Saturday, Sept. 19', 
+        'date':'Saturday, Sept. 19',
+        'month':'September',
+        'monthShort':'Sept',
         'location':'Papa Murphy&apos;s Park', 
         'presaleDescription':'Mon, Aug 24 @ 1 PM',
         'broadcast':'KQCA My58, Estrella TV Sacramento, ESPN+',
         'time':'7:30 PM',
-        'home': true ,
+        'active': false ,
         'specialsContent': {
             'bannerPath':'',
             'description':''
@@ -238,12 +272,14 @@ var singleGameTickets = [
     },
     {
         'team':'Real Monarchs SLC', 
-        'date':'Sunday, Oct. 4', 
+        'date':'Sunday, Oct. 4',
+        'month':'October',
+        'monthShort':'Oct',
         'location':'Papa Murphy&apos;s Park', 
         'presaleDescription':'Mon, Aug 24 @ 1 PM',
         'broadcast':'KQCA My58, Estrella TV Sacramento, ESPN+',
         'time':'2 PM',
-        'home': true ,
+        'active': false ,
         'specialsContent': {
             'bannerPath':'',
             'description':'Noche Latina'
@@ -252,12 +288,14 @@ var singleGameTickets = [
     },
     {
         'team':'Pheonix Rising FC', 
-        'date':'Saturday, Oct. 17', 
+        'date':'Saturday, Oct. 17',
+        'month':'October',
+        'monthShort':'Oct',
         'location':'Papa Murphy&apos;s Park', 
         'presaleDescription':'Mon, Aug 24 @ 1 PM',
         'broadcast':'KQCA My58, Estrella TV Sacramento, ESPN+',
         'time':'7 PM',
-        'home': true,
+        'active': false ,
         'specialsContent': {
             'bannerPath':'',
             'description':''
@@ -268,7 +306,7 @@ var singleGameTickets = [
 
 
 //change the local URLpath on deployment to match the site's image hosting structure
-const URLpathStart = './img/SRFC_TEAMs/'
+const URLpathStart = 'https://srfc.sfo2.digitaloceanspaces.com/'
 const logoURLpaths = {
     'Austin Bold FC': `${URLpathStart}Austin.jpg`,
     'Colorado Springs Switchbacks FC': `${URLpathStart}Colorado.jpg`,

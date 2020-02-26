@@ -1,0 +1,19 @@
+/* LOCAL ENVIRONMENT STYLES */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    background-color: #000000;
+    background-position: center top;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-image: url(https://cdn4.sportngin.com/attachments/background_graphic/b3f9-129332244/Website_Background_Sacramento.jpg);
+}
