@@ -1,31 +1,6 @@
-/* LOCAL ENVIRONMENT STYLES */
-* {
-  box-sizing: border-box; }
-
-body {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: -1;
-  background-color: #000000;
-  background-position: center top;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-image: url(https://cdn4.sportngin.com/attachments/background_graphic/b3f9-129332244/Website_Background_Sacramento.jpg); }
-
-.show {
-  transition: ease-in-out 1s; }
-
-.hide {
-  display: none;
-  transition: ease-in-out 1s; }
-
-#adWrapperBottomLeaderboard {
-  overflow: hidden;
-  height: 0px; }
-
+@use 'localEnvironment';
+@use 'global';
+@use 'adStyles';
 /* SRFC TICKET PAGE STYLES */
 h1 {
   text-align: center; }
@@ -47,11 +22,7 @@ h1 {
 .ticket-card {
   position: relative;
   height: 300px;
-  flex-grow: 1;
-  width: calc(100% / 3);
-  max-width: calc(100% / 3);
-  padding: 15px;
-  font-family: Lato,sans-serif; }
+  padding: 15px; }
   @media (max-width: 920px) {
     .ticket-card {
       width: 50%;
@@ -92,44 +63,35 @@ h1 {
   filter: saturate(75%);
   transition: all .5s; }
 
-.logo-image-holder {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin-top: 33px; }
-
 .logo-image {
   height: 125px;
   margin: 0px auto; }
   .logo-image-holder {
-    display: flex;
-    flex-direction: column;
     justify-content: center;
-    margin-top: 33px; }
-
-.location-flag-wrapper {
-  position: absolute;
-  top: 33px;
-  left: 0px;
-  height: 80px;
-  width: auto; }
+    width: 100%;
+    display: inline-flex; }
 
 .location-flag {
   height: 100%; }
-
-.location-flag-text {
-  font-size: 1.5em;
-  font-weight: 600; }
+  .location-flag-wrapper {
+    position: absolute;
+    top: 33px;
+    left: 0px;
+    height: 80px;
+    width: auto; }
+  .location-flag-text {
+    font-size: 1.5em;
+    font-weight: 600; }
 
 .header-wrapper {
-  position: absolute;
-  display: flex;
-  justify-content: end;
-  width: 100%;
   text-align: center;
   padding: 5px;
   background: #7c2529;
   border-bottom: solid 1px rgba(255, 255, 255, 0.4); }
+
+.header-title {
+  width: 100%;
+  color: White; }
 
 .header-home .header-wrapper {
   background-color: #7c2529; }
@@ -139,11 +101,6 @@ h1 {
 
 .header-away .content-holder .buttons-panel {
   display: none; }
-
-.header-title {
-  width: 100%;
-  color: White;
-  text-align: center; }
 
 .date {
   font-size: 1.2em;
@@ -160,12 +117,6 @@ h1 {
   align-items: center;
   overflow: hidden; }
 
-.team-wrapper {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  width: 100%; }
-
 .promoDescription {
   padding: 0px;
   margin: 0px; }
@@ -174,6 +125,11 @@ h1 {
   font-size: 1.2em;
   font-weight: 800;
   transition: all .5s; }
+  .team-wrapper {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100%; }
 
 .info-wrapper {
   display: flex;
@@ -216,7 +172,18 @@ h1 {
     cursor: pointer; }
 
 /* Month Heading Styles */
-.splitterJan, .splitterFeb, .splitterMar, .splitterApr, .splitterMay, .splitterJun, .splitterJul, .splitterAug, .splitterSept, .splitterOct, .splitterNov, .splitterDec {
+.splitterJan,
+.splitterFeb,
+.splitterMar,
+.splitterApr,
+.splitterMay,
+.splitterJun,
+.splitterJul,
+.splitterAug,
+.splitterSept,
+.splitterOct,
+.splitterNov,
+.splitterDec {
   display: none; }
 
 .monthHeading {

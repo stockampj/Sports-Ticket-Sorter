@@ -115,11 +115,8 @@ singleGameTickets.forEach((game)=>{
           </div>
           <div class="gradient-cover"></div>
           <div class="content-holder">
-            <div class="team-wrapper">
-              <h2 class="team header-override">${team}</h2>
-            </div>
-            <div class="info-wrapper">
-              <h4 class="header-override">${description}</h4>
+            <div class="eventPromo">
+              <img src="" alt="${specials}">
             </div>
             <div class="buttons-panel">
               <a onClick="toggleSides(this)" class="card-button ${specialsShowClass}"><i class="fas fa-long-arrow-alt-left"></i> ${('Back').toUpperCase()}</a>
