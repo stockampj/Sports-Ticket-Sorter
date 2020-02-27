@@ -247,6 +247,7 @@ var singleGameTickets = [
         'location':'Papa Murphy&apos;s Park', 
         'presaleDescription':'Mon, Aug 24 @ 1 PM',
         'broadcast':'KQCA My58, Estrella TV Sacramento, ESPN+',
+        'time':'7 PM',
         'active': false ,
         'specialsContent': {
             'bannerPath':'',

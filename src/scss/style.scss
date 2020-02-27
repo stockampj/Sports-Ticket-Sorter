@@ -1,15 +1,15 @@
-@import '_localEnvironment.scss';
-@import '_global.scss';
+@use 'localEnvironment';
+@use 'global';
+@use 'adStyles';
 
 /* SRFC TICKET PAGE STYLES */
-
+h1 {
+    text-align: center;
+}
 .games-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: start;
-    width: 90%;
-    max-width: 1200px;
-    min-width: 280px;
     margin: auto;
     padding: 0px;
     background-color: #fff;
@@ -21,20 +21,17 @@
         margin-right: -8px;
     }
 }
-  
+
 .ticket-card {
     position: relative;
     height: 300px;
-    flex-grow: 1;
-    width: calc(100% / 3);
-    max-width: calc(100% / 3);
     padding: 15px;
-    font-family: Lato,sans-serif;
 
     @media (max-width: 920px) {
         width: 50%;
         max-width: 50%;
     }
+
     @media (max-width: 620px) {
         width: 100%;
         max-width: 460px;
@@ -53,10 +50,6 @@
         box-shadow: 0px 10px 13px -7px #000000, 3px 3px 10px 6px rgba(73, 31, 31, 0.2);
         overflow: hidden;
 
-        &:hover .gradient-cover{
-            background: linear-gradient(0deg, rgba(200,200,200,.25) 0%, rgba(200,200,200,0.15) 15%, rgba(200,200,200,0) 50%);
-        }
-
         &:hover .team {
             color: rgb(82, 82, 82);
         }
@@ -67,98 +60,84 @@
         }
     }
 }
-  
-.logo-holder {
-    position: absolute;
-    top: 10%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    left: 0px;
-    width: 100%;
-    height: 50%;
-    padding: 0px 5px 5px 5px;
-    overflow: hidden;
-    filter: saturate(75%);
-    transition: all .5s;
-}
 
-.logo-image-holder {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-top: 33px;
-}
-
-.logo-image {
-    height: 125px;
-    margin: 0px auto;
-
+.logo {
     &-holder {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-top: 33px;
+        position: absolute;
+        top: 10%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        left: 0px;
+        width: 100%;
+        height: 50%;
+        padding: 0px 5px 5px 5px;
+        overflow: hidden;
+        filter: saturate(75%);
+        transition: all .5s;
     }
-}
-.location-flag-wrapper {
-    position: absolute;
-    top:33px;
-    left: 0px;
-    height: 80px;
-    width: auto;
+    
+    &-image {
+        height: 125px;
+        margin: 0px auto;
+    
+        &-holder {
+            justify-content: center;
+            width: 100%;
+            display: inline-flex;
+        }
+    }
+
 }
 
 .location-flag {
     height: 100%;
-}
-.location-flag-text {
-    font-size: 1.5em;
-    font-weight: 600;
+
+    &-wrapper {
+        position: absolute;
+        top:33px;
+        left: 0px;
+        height: 80px;
+        width: auto;
+    }
+
+    &-text {
+        font-size: 1.5em;
+        font-weight: 600;
+    }
 }
 
-.header-wrapper{
-    position: absolute;
-    display: flex;
-    justify-content: end;
-    width: 100%;
-    text-align: center;
-    padding:5px;
-    background: rgb(124, 37, 41);
-    border-bottom: solid 1px rgba(255,255,255,.4);
+.header {
+    &-wrapper{
+        text-align: center;
+        padding:5px;
+        background: rgb(124, 37, 41);
+        border-bottom: solid 1px rgba(255,255,255,.4);
+    }
+
+    &-title{
+        width: 100%;
+        color:White;
+    }
+    
+    &-home .header-wrapper {
+        background-color: rgb(124, 37, 41);
+    }
+    
+    &-away .header-wrapper {
+        background-color: #666;
+    }
+    
+    &-away .content-holder .buttons-panel{
+        display: none;
+    }
 }
 
-.header-home .header-wrapper {
-    background-color: rgb(124, 37, 41);
-}
-
-.header-away .header-wrapper {
-    background-color: #666;
-}
-
-.header-away .content-holder .buttons-panel{
-    display: none;
-}
-
-.header-title{
-    width: 100%;
-    color:White;
-    text-align: center;
-}
 
 .date {
     font-size: 1.2em;
     font-weight: 400;
 }
-
-.gradient-cover {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(0deg, rgba(150,150,150,.25) 0%, rgba(150,150,150,0.15) 15%, rgba(150,150,150,0) 50%);
-    transition: all .5s;
-}
-
 
 .content-holder {
     position: absolute;
@@ -171,21 +150,23 @@
     align-items: center;
     overflow: hidden;
 }
-.team-wrapper{
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-}
 
 .promoDescription {
     padding: 0px;
-    margin: 10px 0px;
+    margin: 0px;
 }
 
 .team{
-    font-size: .9em;
+    font-size: 1.2em;
     font-weight: 800;
     transition: all .5s;
+
+    &-wrapper{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+    }
 }
 
 
@@ -195,7 +176,7 @@
     width: 100%;
     padding: 0px 10px 0px 10px;
     font-size: .9em;
-    /* background-color: red; */
+    margin: 5px 0px 10px;
 }
 .location{
     color:#ba8041;
@@ -229,23 +210,25 @@
     text-decoration: none;
 
     &:hover {
-    background-color: rgb(94, 37, 40);
-    color: white;
-    cursor: pointer;
+        background-color: rgb(94, 37, 40);
+        color: white;
+        cursor: pointer;
+    }
 }
-}
-
-.header-override{
-    margin: 0px;
-    /* just in case text-shadow is occurring */
-    text-shadow: none;
-}
-
-
-
 
 /* Month Heading Styles */
-.splitterJan, .splitterFeb, .splitterMar, .splitterApr, .splitterMay, .splitterJun, .splitterJul, .splitterAug, .splitterSept, .splitterOct, .splitterNov, .splitterDec {
+.splitterJan,
+.splitterFeb,
+.splitterMar,
+.splitterApr,
+.splitterMay,
+.splitterJun,
+.splitterJul,
+.splitterAug,
+.splitterSept,
+.splitterOct,
+.splitterNov,
+.splitterDec {
     display: none;
 }
 
@@ -255,16 +238,16 @@
     text-align: center;
     height: 40px;
     padding: 0px;
-    margin: 10px 0px 5px;
+    margin: 10px 15px 5px;
 
     & h3 {
         font-size: 30px;
         width: fit-content;
         background: #fff;
-        color: #ba8041;
+        color: #7c2529;
         padding: 0px 20px;
         margin: 0px auto;
-        display: block;
+        display: inline-block;
         z-index: 2;
     }
 
@@ -272,7 +255,7 @@
         background: linear-gradient(to right, #847550, #bda76f);
         height: 3px;
         width: 100%;
-        margin-top: -28px;
+        margin-top: -18px;
         z-index: 1;
     }
 }

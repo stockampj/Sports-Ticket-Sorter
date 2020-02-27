@@ -21,38 +21,37 @@ singleGameTickets.forEach((game)=>{
   const specialsShowClass = (specialsAvailable) ? 'show' : 'hide';
   // const specialsPresaleShowClass= (specialsPresale) ? 'hide' : 'show';
 
-  console.log(bannerPath + " " + description)
-
   //this changes the color of the header by injecting a active/away background color
   const headerColorClass = (active) ? 'header-active' : 'header-away';
+  
   //This hides the tickets button depending on the active/away status. It could be placed in other classes to show or hide depending on this status.
   const showClass = (active) ? 'show' : 'hide';
-
-  // If game has special offer, show - if not, hide
   
   
   // Creates a small triangle SVG to show a active or away game status
-  const locationText = (active) ? 'H' : 'A';
-  const flagColor = (active) ? '#7c2529' : '#666'
+  // const locationText = (active) ? 'H' : 'A';
+  // const flagColor = (active) ? '#7c2529' : '#666'
   
   // Corner SVG for active/inactive
-  const flagSVG= `
-    <svg height="80" width="80">
-      <polygon points="-10,-10 90,-10 -10,90" style="
-        fill:white;
-        fill-opacity:1;
-        stroke:${flagColor};
-        stroke-width:1" />
-      <polygon points="-10,-10 75,-10 -10,75" style="
-        fill:${flagColor};
-        fill-opacity:.25;
-        stroke:${flagColor};
-        stroke-width:1" />
-      <text class="location-flag-text" x="10" y="30" fill=${flagColor}>${locationText}</text>
-    </svg>`
+  // const flagSVG= `
+  //   <svg height="80" width="80">
+  //     <polygon points="-10,-10 90,-10 -10,90" style="
+  //       fill:white;
+  //       fill-opacity:1;
+  //       stroke:${flagColor};
+  //       stroke-width:1" />
+  //     <polygon points="-10,-10 75,-10 -10,75" style="
+  //       fill:${flagColor};
+  //       fill-opacity:.25;
+  //       stroke:${flagColor};
+  //       stroke-width:1" />
+  //     <text class="location-flag-text" x="10" y="30" fill=${flagColor}>${locationText}</text>
+  //   </svg>`
 
   
   //this code transforms the team name if it exceeds a certain number of characters and breaks it in the middle of the word count
+  // to insert this into the append code, use: <div class="location-flag-wrapper">${flagSVG}</div>
+  
   // const teamNameTransformer = ()=>{
   //   let teamString = '';
   //   if (team.length > 20){
@@ -84,12 +83,11 @@ singleGameTickets.forEach((game)=>{
       <div class="ticket-card-body front">
           <div class="header-wrapper">
             <h4 class="header-title header-override"><span class='date'>${date.toUpperCase()}</span></h4>
-            <div class="location-flag-wrapper">${flagSVG}</div>
           </div>
           <div class="hero-image-holder logo-image-holder">
             <img class="logo-image" src=${logoURLpath} aria-label="logo for ${team}">
           </div>
-          <div class="gradient-cover"></div>
+          
           <div class="content-holder">
             <div class="team-wrapper">
               <h2 class="team header-override">${team}</h2>
@@ -103,7 +101,7 @@ singleGameTickets.forEach((game)=>{
               <h4 class="presale-description header-override">Presale: ${presaleDescription}</h4>
             </div>
             <div class="buttons-panel">
-              <a onClick="toggleSides(this)" class="card-button ${specialsShowClass}">${('Specials').toUpperCase()}</a>
+              <a onClick="toggleSides(this)" class="card-button ${specialsShowClass}">${('Promo').toUpperCase()}</a>
               <a class="card-button ${ticketButtonShowClass}" href=${ticketURL}><i class="fas fa-ticket-alt"></i> ${('Tickets').toUpperCase()}</a>
             </div>
           </div>
@@ -117,11 +115,8 @@ singleGameTickets.forEach((game)=>{
           </div>
           <div class="gradient-cover"></div>
           <div class="content-holder">
-            <div class="team-wrapper">
-              <h2 class="team header-override">${team}</h2>
-            </div>
-            <div class="info-wrapper">
-              <h4 class="header-override">${description}</h4>
+            <div class="eventPromo">
+              <img src="" alt="${specials}">
             </div>
             <div class="buttons-panel">
               <a onClick="toggleSides(this)" class="card-button ${specialsShowClass}"><i class="fas fa-long-arrow-alt-left"></i> ${('Back').toUpperCase()}</a>
