@@ -1,17 +1,31 @@
-@use 'localEnvironment';
-@use 'global';
-@use 'adStyles';
+/* LOCAL ENVIRONMENT STYLES */
+* {
+  box-sizing: border-box; }
+
+body {
+  z-index: -1;
+  background-attachment: fixed;
+  background: #000000 url(https://cdn4.sportngin.com/attachments/background_graphic/b3f9-129332244/Website_Background_Sacramento.jpg) no-repeat center top; }
+
+.show {
+  transition: ease-in-out 1s; }
+
+.hide {
+  display: none;
+  transition: ease-in-out 1s; }
+
+/* AD STYLES */
+#adWrapperBottomLeaderboard {
+  overflow: hidden;
+  height: 0px; }
+
 /* SRFC TICKET PAGE STYLES */
 h1 {
   text-align: center; }
 
 .games-container {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: start;
-  margin: auto;
-  padding: 0px;
-  background-color: #fff; }
+  flex-wrap: wrap; }
   @media (max-width: 1000px) {
     .games-container {
       /* weird calc to adjust for padding/nargin in body */
@@ -49,6 +63,23 @@ h1 {
       padding: 0px;
       filter: saturate(100%); }
 
+.eventPromo {
+  height: 187px; }
+  .eventPromo img {
+    height: 150px;
+    display: block;
+    z-index: 1; }
+  .eventPromo p {
+    padding: 5px 8px;
+    margin-top: -20px;
+    background: white !important;
+    display: inline-block;
+    z-index: 2;
+    margin-bottom: 0px; }
+
+.back .eventPromo {
+  margin-left: 1px; }
+
 .logo-holder {
   position: absolute;
   top: 10%;
@@ -64,7 +95,7 @@ h1 {
   transition: all .5s; }
 
 .logo-image {
-  height: 125px;
+  height: 100px;
   margin: 0px auto; }
   .logo-image-holder {
     justify-content: center;
@@ -107,10 +138,6 @@ h1 {
   font-weight: 400; }
 
 .content-holder {
-  position: absolute;
-  bottom: 0px;
-  width: 100%;
-  height: 45%;
   display: flex;
   flex-direction: column;
   justify-content: start;
@@ -148,7 +175,7 @@ h1 {
   font-weight: 400;
   min-width: 80px; }
 
-.buttons-panel {
+.buttons-panel, .presale-content-wrapper {
   position: absolute;
   bottom: 0px;
   width: 100%;

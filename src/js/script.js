@@ -1,11 +1,11 @@
 singleGameTickets.forEach((game)=>{
-  // const {team,datelocation, time, broadcast,active,specialsContent,ticketContent,ticketURL} = game;
-  const {team, date, location, presaleDescription, broadcast, time, month, monthShort, active, specialsContent, ticketURL} = game;
-  const {bannerPath, description} = specialsContent;
+  const {team, date, month, monthShort, location, presaleDescription, time, active, ticketURL, promoContent} = game;
+  const {frontTitle, title, description} = promoContent;
   const logoURLpath =  logoURLpaths[team];
+  const promoURLpath = logoURLpaths[title]
   const ticketsAvailable = (ticketURL !== '') ? true : false;
   const specialsAvailable = (description !== '') ? true : false;
-  // const specialsPresale = (active !== '') ? true : false;
+  const presaleAvailable = (active !== true) ? true : false;
 
   // this generates a search for the field's location via google
   const locationURL = () =>{
@@ -19,7 +19,7 @@ singleGameTickets.forEach((game)=>{
   const ticketButtonShowClass= (ticketsAvailable) ? 'show' : 'hide';
   const presaleContentShowClass= (ticketsAvailable) ? 'hide' : 'show';
   const specialsShowClass = (specialsAvailable) ? 'show' : 'hide';
-  // const specialsPresaleShowClass= (specialsPresale) ? 'hide' : 'show';
+  const presaleShowClass= (presaleAvailable) ? 'hide' : 'show';
 
   //this changes the color of the header by injecting a active/away background color
   const headerColorClass = (active) ? 'header-active' : 'header-away';
@@ -82,7 +82,7 @@ singleGameTickets.forEach((game)=>{
     <div class="col-xs-12 col-sm-6 col-md-4 ticket-card ${headerColorClass} ">
       <div class="ticket-card-body front">
           <div class="header-wrapper">
-            <h4 class="header-title header-override"><span class='date'>${date.toUpperCase()}</span></h4>
+            <h4 class="header-title"><span class='date'>${date.toUpperCase()}</span></h4>
           </div>
           <div class="hero-image-holder logo-image-holder">
             <img class="logo-image" src=${logoURLpath} aria-label="logo for ${team}">
@@ -90,37 +90,36 @@ singleGameTickets.forEach((game)=>{
           
           <div class="content-holder">
             <div class="team-wrapper">
-              <h2 class="team header-override">${team}</h2>
-              <p class="promoDescription">${description}</p>
+              <h2 class="team">${team}</h2>
+              <p class="promoDescription">${frontTitle}</p>
             </div>
             <div class="info-wrapper">
-              <a href=${locationURL()} target="blank" class="location header-override"><i class="fas fa-map-marker-alt"></i> ${location}</a>
-              <h4 class="time header-override"><i class="far fa-clock"></i> ${time}</h4>
+              <a href=${locationURL()} target="blank" class="location"><i class="fas fa-map-marker-alt"></i> ${location}</a>
+              <h4 class="time"><i class="far fa-clock"></i> ${time}</h4>
             </div>
             <div class="presale-content-wrapper ${presaleContentShowClass}">            
-              <h4 class="presale-description header-override">Presale: ${presaleDescription}</h4>
+              <h4 class="presale-description">Presale: ${presaleDescription}</h4>
             </div>
             <div class="buttons-panel">
               <a onClick="toggleSides(this)" class="card-button ${specialsShowClass}">${('Promo').toUpperCase()}</a>
               <a class="card-button ${ticketButtonShowClass}" href=${ticketURL}><i class="fas fa-ticket-alt"></i> ${('Tickets').toUpperCase()}</a>
+              <a class="card-button ${presaleShowClass}" href=${ticketURL}><i class="fas fa-ticket-alt"></i> ${(`Presale: ${presaleDescription}`).toUpperCase()}</a>
             </div>
           </div>
       </div>
       <div class="ticket-card-body back hide">
           <div class="header-wrapper ${headerColorClass}">
-            <h4 class="header-title header-override"><span class='date'>${date.toUpperCase()}</span></h4>
+            <h4 class="header-title"><span class='date'>${title.toUpperCase()}</span></h4>
           </div>
-          <div class="hero-image-holder">
-            <img class="special-image" src=${bannerPath} aria-label="special banner for this game">
-          </div>
-          <div class="gradient-cover"></div>
           <div class="content-holder">
             <div class="eventPromo">
-              <img src="" alt="${specials}">
+              <img class="promo-image" src=${promoURLpath} aria-label="logo for ${title}">
+              <p>${description}</p>
             </div>
             <div class="buttons-panel">
               <a onClick="toggleSides(this)" class="card-button ${specialsShowClass}"><i class="fas fa-long-arrow-alt-left"></i> ${('Back').toUpperCase()}</a>
               <a class="card-button ${ticketButtonShowClass}" href=${ticketURL}><i class="fas fa-ticket-alt"></i> ${('Tickets').toUpperCase()}</a>
+              <a class="card-button ${presaleShowClass}" href=${ticketURL}><i class="fas fa-ticket-alt"></i> ${(`Presale: ${presaleDescription}`).toUpperCase()}</a>
             </div>
           </div>
       </div>

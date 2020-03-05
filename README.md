@@ -22,6 +22,7 @@ Run `npm run scss` to watch and compile scss to css
 
 Below is an overview of each folder/file's purpose and recommended management style of new implementations:
 
+```
 /Sports-Ticket-Sorter/
 |-- /backup/                 # Backup Build and Compiled folders (has latest copy of dist and src directories per last commit)
 |
@@ -55,3 +56,4 @@ Below is an overview of each folder/file's purpose and recommended management st
 |   package-lock.json
 |   package.json
 |   README.md
+```
