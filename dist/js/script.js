@@ -1,11 +1,19 @@
+
+// Formats todays date to be YYY-MM-DD
+let today = new Date().toISOString().split('T', 1)[0];
+
 singleGameTickets.forEach((game)=>{
-  const {team, date, month, monthShort, location, presaleDescription, time, active, ticketURL, promoContent} = game;
-  const {frontTitle, title, description} = promoContent;
+  // grabs information per event object
+  const {team, date, isoDate, month, monthShort, location, presaleDescription, time, active, ticketURL, promoContent} = game;
+  const {title, description} = promoContent;
   const logoURLpath =  logoURLpaths[team];
-  const promoURLpath = logoURLpaths[title]
+  const promoURLpath = promoURLpaths[title]
+  
+  // displays true or false depending on whether certain fields are empty and is the date is in the past
   const ticketsAvailable = (ticketURL !== '') ? true : false;
   const specialsAvailable = (description !== '') ? true : false;
-  const presaleAvailable = (active !== true) ? true : false;
+  const presaleAvailable = (presaleDescription !== '') ? true : false;
+  //   let pastGame = (isoDate < today) ? true : false;
 
   // this generates a search for the field's location via google
   const locationURL = () =>{
@@ -14,12 +22,12 @@ singleGameTickets.forEach((game)=>{
     return url;
   }
 
-  // generates show/hide functionality on whether something is active or not dynamically
-  // Example: don't show tickets if they're not actively available
+  // generates show/hide functionality on whether event is available to purchase from, has promotions/specials, and whether game is in the past
   const ticketButtonShowClass= (ticketsAvailable) ? 'show' : 'hide';
-  const presaleContentShowClass= (ticketsAvailable) ? 'hide' : 'show';
+  const presaleContentShowClass= (presaleAvailable) ? 'show' : 'hide';
   const specialsShowClass = (specialsAvailable) ? 'show' : 'hide';
-  const presaleShowClass= (presaleAvailable) ? 'hide' : 'show';
+  //   const hidePastGame = (pastGame) ? 'hide' : 'show';
+
 
   //this changes the color of the header by injecting a active/away background color
   const headerColorClass = (active) ? 'header-active' : 'header-away';
@@ -28,7 +36,7 @@ singleGameTickets.forEach((game)=>{
   const showClass = (active) ? 'show' : 'hide';
   
   
-  // Creates a small triangle SVG to show a active or away game status
+  // Creates a small triangle SVG to show a active or away game status in the upper left corner of the card
   // const locationText = (active) ? 'H' : 'A';
   // const flagColor = (active) ? '#7c2529' : '#666'
   
@@ -48,38 +56,12 @@ singleGameTickets.forEach((game)=>{
   //     <text class="location-flag-text" x="10" y="30" fill=${flagColor}>${locationText}</text>
   //   </svg>`
 
-  
-  //this code transforms the team name if it exceeds a certain number of characters and breaks it in the middle of the word count
-  // to insert this into the append code, use: <div class="location-flag-wrapper">${flagSVG}</div>
-  
-  // const teamNameTransformer = ()=>{
-  //   let teamString = '';
-  //   if (team.length > 20){
-  //     let string1='';
-  //     let string2=''
-  //     let nameArray = team.split(' ');
-  //     let splitLocation = (nameArray.length/2);
-  //     nameArray.slice(0,splitLocation).forEach((word)=>{
-  //       string1+=word+' ';
-  //     });
-  //     nameArray.slice(splitLocation,nameArray.length).forEach((word)=>{
-  //       string2+=word+' ';
-  //     })
-  //     teamString = string1.trim()+'<br>'+string2.trim();
-  //   }else{
-  //     teamString= team;
-  //   }
-  //   return teamString.toUpperCase();
-  // }
-
-
-
   $('#upcoming-games-schedule').append(`
     <div class="col-xs-12 splitter${monthShort}">
       <h3>${month}</h3>
       <hr class="golden-rule">
     </div>
-    <div class="col-xs-12 col-sm-6 col-md-4 ticket-card ${headerColorClass} ">
+    <div class="col-xs-12 col-sm-6 col-md-4 ticket-card ${headerColorClass} ${title} ">
       <div class="ticket-card-body front">
           <div class="header-wrapper">
             <h4 class="header-title"><span class='date'>${date.toUpperCase()}</span></h4>
@@ -91,41 +73,51 @@ singleGameTickets.forEach((game)=>{
           <div class="content-holder">
             <div class="team-wrapper">
               <h2 class="team">${team}</h2>
-              <p class="promoDescription">${frontTitle}</p>
+              <p class="promoDescription">${title}</p>
             </div>
             <div class="info-wrapper">
               <a href=${locationURL()} target="blank" class="location"><i class="fas fa-map-marker-alt"></i> ${location}</a>
               <h4 class="time"><i class="far fa-clock"></i> ${time}</h4>
             </div>
             <div class="presale-content-wrapper ${presaleContentShowClass}">            
-              <h4 class="presale-description">Presale: ${presaleDescription}</h4>
+              <a class="card-button show openPopup"><i class="fas fa-ticket-alt"></i> ${(`Presale: ${presaleDescription}`).toUpperCase()}</a>
             </div>
             <div class="buttons-panel">
               <a onClick="toggleSides(this)" class="card-button ${specialsShowClass}">${('Promo').toUpperCase()}</a>
-              <a class="card-button ${ticketButtonShowClass}" href=${ticketURL}><i class="fas fa-ticket-alt"></i> ${('Tickets').toUpperCase()}</a>
-              <a class="card-button ${presaleShowClass}" href=${ticketURL}><i class="fas fa-ticket-alt"></i> ${(`Presale: ${presaleDescription}`).toUpperCase()}</a>
+              <a class="card-button ${ticketButtonShowClass} openPopup"><i class="fas fa-ticket-alt"></i> ${('Tickets').toUpperCase()}</a>
             </div>
           </div>
       </div>
       <div class="ticket-card-body back hide">
-          <div class="header-wrapper ${headerColorClass}">
-            <h4 class="header-title"><span class='date'>${title.toUpperCase()}</span></h4>
+        <div class="header-wrapper ${headerColorClass}">
+          <h4 class="header-title"><span class='date'>${title.toUpperCase()}</span></h4>
+        </div>
+        <div class="content-holder">
+          <div class="eventPromo">
+            <img src=${promoURLpath} aria-label="logo for ${title}">
+            <p>${description}</p>
           </div>
-          <div class="content-holder">
-            <div class="eventPromo">
-              <img class="promo-image" src=${promoURLpath} aria-label="logo for ${title}">
-              <p>${description}</p>
-            </div>
-            <div class="buttons-panel">
-              <a onClick="toggleSides(this)" class="card-button ${specialsShowClass}"><i class="fas fa-long-arrow-alt-left"></i> ${('Back').toUpperCase()}</a>
-              <a class="card-button ${ticketButtonShowClass}" href=${ticketURL}><i class="fas fa-ticket-alt"></i> ${('Tickets').toUpperCase()}</a>
-              <a class="card-button ${presaleShowClass}" href=${ticketURL}><i class="fas fa-ticket-alt"></i> ${(`Presale: ${presaleDescription}`).toUpperCase()}</a>
-            </div>
+          <div class="buttons-panel">
+            <a class="card-button ${specialsShowClass}"><i class="fas fa-long-arrow-alt-left"></i> ${('Back').toUpperCase()}</a>
+            <a class="card-button ${ticketButtonShowClass} openPopup"><i class="fas fa-ticket-alt"></i> ${('Tickets').toUpperCase()}</a>
           </div>
+        </div>
       </div>
-
     </div>
   `);
+
+  // if 'Family Day' title exists, append extra button to content-holder
+  $('.Family.Day .back .content-holder').one().append(`
+    <div class="buttons-panel family-pack">
+      <a class="card-button ${ticketButtonShowClass}" href="https://www1.ticketmaster.com/event/1C00583DBAF7779D?did=4for49">4 for $49</a>
+      <a class="card-button ${ticketButtonShowClass}" href="https://www1.ticketmaster.com/event/1C00583DBAF7779D?did=4for89">4 for $89</a>
+    </div>
+    <div class="tickets-panel family-pack">
+      <a class="card-button ${specialsShowClass} openPopup"><i class="fas fa-long-arrow-alt-left"></i> ${('Back').toUpperCase()}</a>
+    </div>
+    </div>
+  `);
+
 });
 
 function toggleSides(button) {
@@ -145,3 +137,25 @@ $( ".splitterSept:first" ).addClass( "monthHeading" );
 $( ".splitterOct:first" ).addClass( "monthHeading" );
 $( ".splitterNov:first" ).addClass( "monthHeading" );
 $( ".splitterDec:first" ).addClass( "monthHeading" );
+
+$(".Family .back .buttons-panel:first").addClass("hide");
+$(".buttons-panel.family-pack").addClass("hide");
+$(".tickets-panel.family-pack").addClass("hide");
+
+$(".buttons-panel.family-pack:first").removeClass("hide");
+$(".tickets-panel.family-pack:first").removeClass("hide");
+
+$(document).ready(function () {
+  $(".wrapper").hide();
+  $(".openPopup").click(function (e) {
+      e.preventDefault();
+      $(".wrapper").show();
+      $("iframe").attr("src", $(this).attr('href'));
+      $(".popup").fadeIn('fast');
+  });
+
+  $(".close").click(function () {
+      $(this).parent().fadeOut("fast");
+      $(".wrapper").hide();
+  });
+});

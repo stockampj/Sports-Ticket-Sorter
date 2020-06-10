@@ -1,29 +1,31 @@
 var singleGameTickets = [
-    {
-        'team': 'FC Tulsa', 
-        'date': 'Saturday, Mar. 7', 
-        'month':'March',
-        'monthShort':'Mar',
-        'location':'Papa Murphy&apos;s Park',
-        'presaleDescription':'',
-        'broadcast':'KQCA My58, Estrella TV Sacramento, ESPN+',
-        'time':'7:30 PM',
-        'active': true,
-        'promoContent': {
-            'title':'Opening Night',
-            'description':'Exclusive SRFC flag giveaway – Post-match fireworks'
-        },
-        'ticketURL': 'https://www1.ticketmaster.com/sacramento-republic-fc-vs-fc-tulsa/event/1C00583DBAEF7791'
-    },
+    // {
+    //     'team': 'FC Tulsa', 
+    //     'date': 'TBD',
+    //     'isoDate': '2020-03-07',
+    //     'month':'March',
+    //     'monthShort':'Mar',
+    //     'location':'Papa Murphy&apos;s Park',
+    //     'presaleDescription':'',
+    //     'broadcast':'KQCA My58, Estrella TV Sacramento, ESPN+',
+    //     'time':'TBD',
+    //     'active': true,
+    //     'promoContent': {
+    //         'title':'Opening Night',
+    //         'description':'Exclusive SRFC flag giveaway – Post-match fireworks'
+    //     },
+    //     'ticketURL': 'https://www1.ticketmaster.com/sacramento-republic-fc-vs-fc-tulsa/event/1C00583DBAEF7791'
+    // },
     {
         'team':'Reno 1868 FC', 
-        'date':'Wednesday, Mar. 25',
+        'date':'POSTPONED',
+        'isoDate': '2020-03-25',
         'month':'March',
         'monthShort':'Mar',
         'location':'Papa Murphy&apos;s Park',
         'presaleDescription':'',
         'broadcast':'ESPN+',
-        'time':'7:30 PM',
+        'time':'TBD',
         'active': true ,
         'promoContent': {
             'title':'White Claw Wednesday',
@@ -33,30 +35,32 @@ var singleGameTickets = [
     },
     {
         'team':'OKC Energy FC', 
-        'date':'Sunday, Mar. 29',
+        'date':'POSTPONED',
+        'isoDate': '2020-03-29',
         'month':'March',
         'monthShort':'Mar',
         'location':'Papa Murphy&apos;s Park', 
         'presaleDescription':'',
         'broadcast':'KQCA My58, Estrella TV Sacramento, ESPN+',
-        'time':'2 PM',
+        'time':'TBD',
         'active': true ,
         'promoContent': {
             'title':'Family Day',
-            'description':'Family 4 Pack starting at $49 and will only be sold from 3/9-3/22'
+            'description':'4 Tickets for $49 or 4 Tickets, Hot dogs, Sodas for $89'
         },
         'ticketURL': 'https://www1.ticketmaster.com/sacramento-republic-fc-vs-okc-energy-fc/event/1C00583DBAF7779D'
     },
     {
         'team':'Oakland Roots', 
-        'date':'Wednesday, Apr. 8',
+        'date':'POSTPONED',
+        'isoDate': '2020-04-09',
         'month':'April',
         'monthShort':'Apr',
         'location':'Papa Murphy&apos;s Park',
-        'presaleDescription':'Mar. 9',
+        'presaleDescription':'',
         'broadcast':'',
-        'time':'7:30 PM',
-        'active': false ,
+        'time':'TBD',
+        'active': true ,
         'promoContent': {
             'title':'U.S. Open Cup Round 2',
             'description':''
@@ -65,14 +69,15 @@ var singleGameTickets = [
     },
     {
         'team':'New Mexico United', 
-        'date':'Saturday, Apr. 18',
+        'date':'POSTPONED',
+        'isoDate': '2020-04-18',
         'month':'April',
         'monthShort':'Apr',
         'location':'Papa Murphy&apos;s Park', 
-        'presaleDescription':'Mar. 30',
+        'presaleDescription':'',
         'broadcast':'KQCA My58, Estrella TV Sacramento, ESPN+',
-        'time':'7:30 PM',
-        'active': false ,
+        'time':'TBD',
+        'active': true ,
         'promoContent': {
             'title':'First Responders Night',
             'description':''
@@ -82,13 +87,14 @@ var singleGameTickets = [
     {
         'team':'San Diego Loyal', 
         'date':'Saturday, May 2',
+        'isoDate': '2020-05-02',
         'month':'May',
         'monthShort':'May',
         'location':'Papa Murphy&apos;s Park', 
-        'presaleDescription':'Mar. 30',
+        'presaleDescription':'',
         'broadcast':'KQCA My58, Estrella TV Sacramento, ESPN+',
         'time':'7:30 PM',
-        'active': false ,
+        'active': true ,
         'promoContent': {
             'title':'Education Night',
             'description':''
@@ -98,13 +104,14 @@ var singleGameTickets = [
     {
         'team':'El Paso Locomotive FC', 
         'date':'Saturday, May 30',
+        'isoDate': '2020-05-30',
         'month':'May',
         'monthShort':'May',
         'location':'Papa Murphy&apos;s Park', 
-        'presaleDescription':'Mar. 30',
+        'presaleDescription':'',
         'broadcast':'KQCA My58, Estrella TV Sacramento, ESPN+',
         'time':'7:30 PM',
-        'active': false ,
+        'active': true ,
         'promoContent': {
             'title':'PRIDE',
             'description':''
@@ -114,13 +121,14 @@ var singleGameTickets = [
     {
         'team':'San Antonio FC', 
         'date':'Saturday, June 20',
+        'isoDate': '2020-06-20',
         'month':'June',
         'monthShort':'Jun',
         'location':'Papa Murphy&apos;s Park', 
-        'presaleDescription':'Mar. 30',
+        'presaleDescription':'',
         'broadcast':'KQCA My58, Estrella TV Sacramento, ESPN+',
         'time':'8 PM',
-        'active': false ,
+        'active': true ,
         'promoContent': {
             'title':'',
             'description':''
@@ -130,13 +138,14 @@ var singleGameTickets = [
     {
         'team':'Orange County SC', 
         'date':'Saturday, June 27',
+        'isoDate': '2020-06-27',
         'month':'June',
         'monthShort':'Jun',
         'location':'Papa Murphy&apos;s Park', 
-        'presaleDescription':'Mar. 30',
+        'presaleDescription':'',
         'broadcast':'KQCA My58, Estrella TV Sacramento, ESPN+',
         'time':'8 PM',
-        'active': false ,
+        'active': true ,
         'promoContent': {
             'title':'',
             'description':''
@@ -146,6 +155,7 @@ var singleGameTickets = [
     {
         'team':'Rio Grande Valley FC Toros', 
         'date':'Saturday, July 11',
+        'isoDate': '2020-07-11',
         'month':'July',
         'monthShort':'Jul',
         'location':'Papa Murphy&apos;s', 
@@ -162,6 +172,7 @@ var singleGameTickets = [
     {
         'team':'LA Galaxy II', 
         'date':'Saturday, July 18',
+        'isoDate': '2020-07-18',
         'month':'July',
         'monthShort':'Jul', 
         'location':'Papa Murphy&apos;s', 
@@ -178,6 +189,7 @@ var singleGameTickets = [
     {
         'team':'Tacoma Defiance', 
         'date':'Wednesday, July 29',
+        'isoDate': '2020-07-29',
         'month':'July',
         'monthShort':'Jul',
         'location':'Papa Murphy&apos;s Park', 
@@ -194,6 +206,7 @@ var singleGameTickets = [
     {
         'team':'Austin Bold FC', 
         'date':'Saturday, Aug. 8',
+        'isoDate': '2020-08-08',
         'month':'August',
         'monthShort':'Aug',
         'location':'Papa Murphy&apos;s Park', 
@@ -210,6 +223,7 @@ var singleGameTickets = [
     {
         'team':'Portland Timbers 2', 
         'date':'Saturday, Aug. 22',
+        'isoDate': '2020-08-22',
         'month':'August',
         'monthShort':'Aug',
         'location':'Papa Murphy&apos;s Park', 
@@ -226,6 +240,7 @@ var singleGameTickets = [
     {   
         'team':'Colorado Springs Switchbacks FC', 
         'date':'Saturday, Sept. 9',
+        'isoDate': '2020-09-09',
         'month':'September',
         'monthShort':'Sept',
         'location':'Papa Murphy&apos;s Park', 
@@ -242,6 +257,7 @@ var singleGameTickets = [
     {
         'team':'Las Vegas Lights FC', 
         'date':'Saturday, Sept. 19',
+        'isoDate': '2020-09-19',
         'month':'September',
         'monthShort':'Sept',
         'location':'Papa Murphy&apos;s Park', 
@@ -258,6 +274,7 @@ var singleGameTickets = [
     {
         'team':'Real Monarchs SLC', 
         'date':'Sunday, Oct. 4',
+        'isoDate': '2020-10-04',
         'month':'October',
         'monthShort':'Oct',
         'location':'Papa Murphy&apos;s Park', 
@@ -274,6 +291,7 @@ var singleGameTickets = [
     {
         'team':'Pheonix Rising FC', 
         'date':'Saturday, Oct. 17',
+        'isoDate': '2020-10-17',
         'month':'October',
         'monthShort':'Oct',
         'location':'Papa Murphy&apos;s Park', 
@@ -312,9 +330,9 @@ const logoURLpaths = {
     'Rio Grande Valley FC Toros': `${URLpathStart}RGV.jpg`,
     'San Diego Loyal': `${URLpathStart}SD.jpg`,
     'Tacoma Defiance': `${URLpathStart}Tacoma.jpg`,
-  }
+}
   const promoURLpaths = {
     'Opening Night': `${promoPathStart}Theorem_340x197.jpg`,
     'White Claw Wednesday': `${promoPathStart}Theorem_340x197%202.jpg`,
     'Family Day': `${promoPathStart}Theorem_340x197%203.jpg`
-  }
+}

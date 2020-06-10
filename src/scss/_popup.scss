@@ -1,0 +1,33 @@
+.wrapper {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: 99;
+
+    .popup {
+        width: 50%;
+        min-width: 300px;
+        margin: 0 auto;
+
+        /* Close popup 'X' button */
+        a {
+            position: absolute;
+            right: 80px;
+            top: 35px;
+            font-size: 25px;
+        }
+
+        iframe {
+            border: none !important;
+            background: transparent;
+            height: 540px;
+            overflow: hidden;
+            
+
+            body {
+                background: transparent;
+
+            }
+        }
+    }
+}

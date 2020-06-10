@@ -75,7 +75,8 @@ h1 {
     background: white !important;
     display: inline-block;
     z-index: 2;
-    margin-bottom: 0px; }
+    margin-bottom: 0px;
+    width: 100%; }
 
 .back .eventPromo {
   margin-left: 1px; }
@@ -175,8 +176,8 @@ h1 {
   font-weight: 400;
   min-width: 80px; }
 
-.buttons-panel, .presale-content-wrapper {
-  position: absolute;
+.buttons-panel, .presale-content-wrapper, .tickets-panel {
+  position: relative;
   bottom: 0px;
   width: 100%;
   display: flex;
@@ -235,3 +236,26 @@ h1 {
     width: 100%;
     margin-top: -18px;
     z-index: 1; }
+
+/* Family Pack Promo */
+.family-pack.hide {
+  display: none !important; }
+
+.Family {
+  height: fit-content; }
+  .Family .back .content-holder {
+    overflow: visible; }
+    .Family .back .content-holder .eventPromo {
+      height: fit-content; }
+      .Family .back .content-holder .eventPromo img {
+        height: 150px;
+        margin: 0px auto; }
+    .Family .back .content-holder .buttons-panel.family-pack {
+      position: relative; }
+      .Family .back .content-holder .buttons-panel.family-pack.hide {
+        display: none !important; }
+    .Family .back .content-holder .tickets-panel.family-pack {
+      display: block !important;
+      position: relative; }
+      .Family .back .content-holder .tickets-panel.family-pack.hide {
+        display: none !important; }
